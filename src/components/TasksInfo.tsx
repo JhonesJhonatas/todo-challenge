@@ -4,6 +4,7 @@ interface Props{
 }
 
 export function TasksInfo(props : Props) {
+
   return (
     <section className="border-b border-gray-600 pb-6 flex justify-between mb-8">
 
