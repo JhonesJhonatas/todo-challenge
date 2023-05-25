@@ -1,4 +1,4 @@
-#Todo - Challege
+## Todo - Challege
 
 ## Descrição
 Desafio lançado pela RocketSeat na trilha Ignite, onde o ojetivo é criar um TodoList em que se possa cadastrar e remover itens, além de possuir um contador mostrando a quantidade de tarefas criadas e concluídas.
