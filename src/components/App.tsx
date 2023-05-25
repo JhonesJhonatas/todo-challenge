@@ -1,3 +1,4 @@
+import { Form } from "./Form"
 import { Header } from "./Header"
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
 
       <Header />
       
+      <Form />
    </main>
   )
 }
