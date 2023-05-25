@@ -1,4 +1,4 @@
-import { HasNoTasks } from "./HasNoTasks";
+import { TaskBox } from "./TaskBox";
 import { TasksInfo } from "./TasksInfo";
 
 export function TasksArea(){
@@ -7,7 +7,7 @@ export function TasksArea(){
 
       <TasksInfo />
 
-      <HasNoTasks />
+      <TaskBox />
 
     </section>
   )
