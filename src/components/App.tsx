@@ -1,5 +1,6 @@
 import { Form } from "./Form"
 import { Header } from "./Header"
+import { TasksArea } from "./TasksArea"
 
 function App() {
 
@@ -9,6 +10,9 @@ function App() {
       <Header />
       
       <Form />
+
+      <TasksArea />
+
    </main>
   )
 }
