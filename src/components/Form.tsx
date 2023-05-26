@@ -1,11 +1,23 @@
+import { v4 as uuid } from 'uuid'
 import { PlusCircle } from "@phosphor-icons/react";
 import { FormEvent } from "react";
 
-export function Form() {
+interface FormProps {
+  createNewTask: Function,
+}
 
-  function handleCreateNewTask(event: FormEvent){
+export function Form({createNewTask}: FormProps) {
+
+  function handleCreateNewTask(event: FormEvent<HTMLFormElement>){
     event.preventDefault()
 
+    const newComment = {
+      id: uuid(),
+      complete: false,
+      description: event.target.inputForm.value,
+    }
+
+    createNewTask(newComment)
 
   }
 
