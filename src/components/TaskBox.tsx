@@ -2,19 +2,28 @@ import { Trash } from '@phosphor-icons/react'
 import { useState } from 'react'
 
 interface TaskProps {
+  id: string,
   complete: boolean,
   description: string,
   changeStateOfTask: Function,
+  deleteTask: Function,
 }
 
-export function TaskBox({ complete, description, changeStateOfTask}: TaskProps) {
+export function TaskBox({ id, complete, description, changeStateOfTask, deleteTask }: TaskProps) {
 
   const [stateChecked, setStateChecked] = useState(complete)
 
-  function handleCompleteTask(event: InputEvent) {
+  function handleCompleteTask() {
+
     setStateChecked(event.target.checked)
 
     changeStateOfTask(event.target.checked)
+
+  }
+
+  function handleDeteleTask() {
+
+    deleteTask(id)
 
   }
 
@@ -29,7 +38,7 @@ export function TaskBox({ complete, description, changeStateOfTask}: TaskProps) 
 
       </div>
 
-      <Trash className='text-gray-300 cursor-pointer ease-in-out duration-100  hover:bg-gray-800 hover:text-red-600 rounded p-1' size={28} />
+      <Trash onClick={handleDeteleTask} className='text-gray-300 cursor-pointer ease-in-out duration-100  hover:bg-gray-800 hover:text-red-600 rounded p-1' size={28} />
 
     </div>
   )

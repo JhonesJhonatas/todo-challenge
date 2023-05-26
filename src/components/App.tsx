@@ -11,6 +11,10 @@ interface TaskInterface {
   description: string,
 }
 
+interface DeletePropsInterface{
+  id: string,
+}
+
 function App() {
 
   const [tasksList, setTasksList] = useState([
@@ -52,9 +56,23 @@ function App() {
 
     setTasksList([...tasksList, newTask])
 
-    console.log(tasksList.length)
-
     setCountTasks(countTasks + 1)
+  }
+
+  function deleteTask(id : DeletePropsInterface){
+      
+    const idToRemove = id
+
+    const newTasksList = tasksList.filter(task => task.id !== idToRemove)
+
+    const countCompleteTasks = newTasksList.filter(task => task.complete === true)
+
+    console.log(countCompleteTasks)
+
+    setTasksList(newTasksList)
+    setCountTasks(countTasks -1)
+    setCountCompleteTasks(countCompleteTasks.length)
+
   }
 
   return (
@@ -69,7 +87,7 @@ function App() {
         <TasksInfo tasksCount={countTasks} completeTasksCount={countCompleteTasks} />
 
         {tasksList.map(task => {
-          return <TaskBox key={task.id} complete={task.complete} description={task.description} changeStateOfTask={changeStateOfTask} />
+          return <TaskBox id={task.id} key={task.id} complete={task.complete} description={task.description} changeStateOfTask={changeStateOfTask} deleteTask={deleteTask} />
         })}
 
       </section>
