@@ -9,4 +9,4 @@ Projeto desenvolvido utilizando:
  • PhosphorIcons
  • uuid
 
-![image](https://github.com/JhonesJhonatas/todo-challenge/assets/105026951/f5b5c0e9-075f-4553-b93a-e6c76cf3c765)
+<img width="959" alt="image" src="https://github.com/JhonesJhonatas/todo-challenge/assets/105026951/437450f3-8a52-4d4f-a507-719ee7284d30">
