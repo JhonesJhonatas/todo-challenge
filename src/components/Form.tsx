@@ -36,7 +36,7 @@ export function Form({ registerNewTask }: FormParams) {
 
   return (
 
-    <form onSubmit={handleCreateNewTask} className="flex justify-center -mt-6 gap-4 w-5/12 mx-auto">
+    <form onSubmit={handleCreateNewTask} className="flex justify-center -mt-6 gap-4 w-5/12 mx-auto max-md:w-4/5">
 
       <input
         onChange={changeStateOfForm}

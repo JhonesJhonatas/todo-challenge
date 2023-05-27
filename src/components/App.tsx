@@ -73,7 +73,7 @@ export function App() {
 
       <Form registerNewTask={registerNewTask}/>
 
-      <section className="w-5/12 mx-auto mt-10 mb-10 flex flex-col gap-y-4">
+      <section className="w-5/12 mx-auto mt-10 mb-10 flex flex-col gap-y-4 max-md:w-4/5">
 
         <TasksInfo countOfTasks={countOfTasks} countOfCompleteTasks={countOfCompleteTasks} />
 
