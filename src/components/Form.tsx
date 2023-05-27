@@ -30,6 +30,8 @@ export function Form({ registerNewTask }: FormParams) {
     }
 
     registerNewTask(newTask)
+
+    setValueOfForm('')
   }
 
   return (
@@ -41,6 +43,7 @@ export function Form({ registerNewTask }: FormParams) {
         className="p-3 rounded text-gray-100 bg-gray-700 w-full focus:outline-none focus:outline focus:outline-blue-500"
         type="text"
         placeholder="Adicione uma nova tarefa"
+        value={valueOfForm}
       />
 
       <button type="submit" className="flex bg-blue-500 rounded pw-2 px-4 items-center gap-1 text-gray-50 cursor-pointer ease-in-out duration-300 hover:bg-blue-600">
