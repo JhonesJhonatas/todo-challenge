@@ -44,6 +44,7 @@ export function Form({ registerNewTask }: FormParams) {
         type="text"
         placeholder="Adicione uma nova tarefa"
         value={valueOfForm}
+        required
       />
 
       <button type="submit" className="flex bg-blue-500 rounded pw-2 px-4 items-center gap-1 text-gray-50 cursor-pointer ease-in-out duration-300 hover:bg-blue-600">
